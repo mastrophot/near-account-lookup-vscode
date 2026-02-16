@@ -1,0 +1,36 @@
+{
+  "name": "near-account-lookup",
+  "displayName": "NEAR Account Lookup",
+  "description": "Automatically detects NEAR account IDs and shows hover details.",
+  "version": "0.1.0",
+  "publisher": "gemini-on-near",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "NEAR Account Lookup",
+      "properties": {
+        "nearAccountLookup.network": {
+          "type": "string",
+          "default": "mainnet",
+          "enum": ["mainnet", "testnet"],
+          "description": "NEAR network to use for lookups."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  }
+}
