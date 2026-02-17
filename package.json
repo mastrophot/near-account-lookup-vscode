@@ -1,16 +1,23 @@
 {
   "name": "near-account-lookup",
   "displayName": "NEAR Account Lookup",
-  "description": "Automatically detects NEAR account IDs and shows hover details.",
-  "version": "0.1.0",
+  "description": "Detects NEAR account IDs, shows balance/activity on hover, and links to explorer.",
+  "version": "0.1.1",
   "publisher": "gemini-on-near",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastrophot/near-account-lookup-vscode.git"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
@@ -27,20 +34,12 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "compile": "tsc -p ./"
   },
-  "dependencies": {
-    "near-api-js": "^5.0.0",
-    "node-fetch": "^3.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/vscode": "^1.75.0",
     "typescript": "^4.9.5"
   }
 }
-

@@ -1,23 +1,29 @@
 # NEAR Account Lookup
 
-VS Code extension for quick NEAR account details.
+VS Code extension for fast account inspection directly in the editor.
 
 ## Features
 
-- **Auto-Detection:** Detects NEAR account IDs in any text file.
-- **Hover Insights:** Shows account balance, storage usage, and network on hover.
-- **Quick Links:** One-click navigation to the NEAR Explorer.
-- **Configurable:** Switch between `mainnet` and `testnet` in settings.
+- Detects NEAR named and implicit account IDs in code/text.
+- Hover popup with:
+  - account balance,
+  - storage usage,
+  - network indicator,
+  - recent activity summary (last transactions).
+- Explorer integration:
+  - direct link in hover,
+  - clickable account IDs in files.
+- Network switching between `mainnet` and `testnet`.
 
 ## Usage
 
-1. Open any file containing a NEAR account ID (e.g., `bob.near`).
-2. Hover your mouse over the account ID.
-3. View the popup with live data from the blockchain.
+1. Open any file with an account ID (for example: `alice.near`).
+2. Hover the account ID to see details.
+3. Click the account ID or the hover explorer link to open NEAR Explorer.
 
 ## Configuration
 
-- `nearAccountLookup.network`: Choose between `mainnet` or `testnet`.
+- `nearAccountLookup.network`: `mainnet` or `testnet`.
 
 ## License
 
